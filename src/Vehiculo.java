@@ -7,10 +7,12 @@ public class Vehiculo {
     private double cilindraje;
     private double potencia;
     private int tipoCombustible;                    //1) Gasolina, 2) Diesel
+    private Duenio duenio;
 
 
     public Vehiculo(String marca, String modelo, String placa, String color,
-                    double cilindraje, double potencia, int tipoCombustible){
+                    double cilindraje, double potencia, int tipoCombustible,
+                    String nombreDu, String cedulaDu, int edadDu){
 
         //this se refiere al objeto actual y no a la clase en si
         this.marca = marca;
@@ -20,6 +22,7 @@ public class Vehiculo {
         this.cilindraje = cilindraje;
         this.potencia = potencia;
         this.tipoCombustible = tipoCombustible;
+        this.duenio = new Duenio(nombreDu, cedulaDu, edadDu);
 
     }
 
@@ -40,24 +43,10 @@ public class Vehiculo {
 
     }
 
-
-    public class Duenio{
-        private String nombre;
-        private String cedula;
-        private int edad;
-
-        public Duenio(String nombre, String cedula, int edad){
-            this.nombre = nombre;
-            this.cedula = cedula;
-            this.edad = edad;
-        }
-
-    }
-
     void infoDuenio(){
-        System.out.println("Nombre: ");
-        System.out.println("Cedula: ");
-        System.out.println("Edad: ");
+        System.out.println("---- Informacion Duenio ----");
+        this.duenio.info();
     }
+
 
 }
