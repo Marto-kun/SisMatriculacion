@@ -9,11 +9,13 @@ public class Main {
                 1.5, 83, 1);
         //Vehiculo v2 = new Vehiculo();
 
-
+        Vehiculo.Duenio duenioV1 = v1.new Duenio("Juan", "0650087331", 25);
 
         v1.informacion();
         double acv1 = v1.aceleracion();
         System.out.println("Aceleracion: " + acv1);
+
+        v1.infoDuenio();
 
 
 

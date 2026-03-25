@@ -12,6 +12,7 @@ public class Vehiculo {
     public Vehiculo(String marca, String modelo, String placa, String color,
                     double cilindraje, double potencia, int tipoCombustible){
 
+        //this se refiere al objeto actual y no a la clase en si
         this.marca = marca;
         this.modelo = modelo;
         this.placa = placa;
@@ -33,11 +34,30 @@ public class Vehiculo {
     }
 
 
-
      void informacion() {
         System.out.println("---- Informacion Vehiculo ----");
         System.out.println("Marca: " + marca + "\nModelo: " + modelo + "\nPlaca: " + placa + "\nColor: " + color);
 
+    }
+
+
+    public class Duenio{
+        private String nombre;
+        private String cedula;
+        private int edad;
+
+        public Duenio(String nombre, String cedula, int edad){
+            this.nombre = nombre;
+            this.cedula = cedula;
+            this.edad = edad;
+        }
+
+    }
+
+    void infoDuenio(){
+        System.out.println("Nombre: ");
+        System.out.println("Cedula: ");
+        System.out.println("Edad: ");
     }
 
 }
