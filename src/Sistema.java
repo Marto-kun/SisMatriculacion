@@ -82,12 +82,6 @@ public class Sistema {
         System.out.println(vehi.aceleracion() + " HP/L");
     }
 
-    void imprimirInfoDu(Duenio due){
-        System.out.println("---- Información Dueño ----");
-        System.out.println("Nombre: "+ due.getNombre());
-        System.out.println("Cedula: "+ due.getCedula());
-        System.out.println("Edad: "+ due.getEdad());
-    }
 
 
 }
