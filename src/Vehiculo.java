@@ -57,5 +57,67 @@ public class Vehiculo {
         this.duenio.info();
     }
 
+    public String getMarca() {
+        return marca;
+    }
 
+    public void setMarca(String marca) {
+        this.marca = marca;
+    }
+
+    public String getModelo() {
+        return modelo;
+    }
+
+    public void setModelo(String modelo) {
+        this.modelo = modelo;
+    }
+
+    public String getPlaca() {
+        return placa;
+    }
+
+    public void setPlaca(String placa) {
+        this.placa = placa;
+    }
+
+    public String getColor() {
+        return color;
+    }
+
+    public void setColor(String color) {
+        this.color = color;
+    }
+
+    public double getCilindraje() {
+        return cilindraje;
+    }
+
+    public void setCilindraje(double cilindraje) {
+        this.cilindraje = cilindraje;
+    }
+
+    public double getPotencia() {
+        return potencia;
+    }
+
+    public void setPotencia(double potencia) {
+        this.potencia = potencia;
+    }
+
+    public int getTipoCombustible() {
+        return tipoCombustible;
+    }
+
+    public void setTipoCombustible(int tipoCombustible) {
+        this.tipoCombustible = tipoCombustible;
+    }
+
+    public Duenio getDuenio() {
+        return duenio;
+    }
+
+    public void setDuenio(Duenio duenio) {
+        this.duenio = duenio;
+    }
 }

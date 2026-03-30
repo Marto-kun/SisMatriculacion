@@ -56,5 +56,28 @@ public class Sistema {
         return du;
     }
 
+    void imprimirInfoV(Vehiculo vehi){
+        System.out.println("Marca: "+ vehi.getMarca());
+        System.out.println("Modelo: "+ vehi.getModelo());
+        System.out.println("Placa: "+ vehi.getPlaca());
+        System.out.println("Color: "+ vehi.getColor());
+        System.out.println("Cilindraje: "+ vehi.getCilindraje());
+        System.out.println("Potencia: "+ vehi.getPotencia());
+
+        if (vehi.getTipoCombustible() == 1){
+            System.out.println("Combustible: Gasolina");
+        }else {
+            System.out.println("Combustible: Diesel");
+        }
+
+    }
+
+    void imprimirInfoDu(Duenio due){
+        System.out.println("---- Información Dueño ----");
+        System.out.println("Nombre: "+ due.getNombre());
+        System.out.println("Cedula: "+ due.getCedula());
+        System.out.println("Edad: "+due.getEdad());
+    }
+
 
 }

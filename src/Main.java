@@ -9,13 +9,14 @@ public class Main {
         //Vehiculo v2 = new Vehiculo();
 
 
-
         v1.informacion();
         double acv1 = v1.aceleracion();
         System.out.println("Aceleracion: " + acv1);
 
 
         v1.infoDuenio();
+
+
 
 
     }
