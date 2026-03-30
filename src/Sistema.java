@@ -57,6 +57,7 @@ public class Sistema {
     }
 
     void imprimirInfoV(Vehiculo vehi){
+        System.out.println("----Informacion Vehiculo ----");
         System.out.println("Marca: "+ vehi.getMarca());
         System.out.println("Modelo: "+ vehi.getModelo());
         System.out.println("Placa: "+ vehi.getPlaca());
@@ -70,13 +71,22 @@ public class Sistema {
             System.out.println("Combustible: Diesel");
         }
 
+        System.out.println("---- Información Dueño ----");
+        System.out.println("Nombre: "+ vehi.getDuenio().getNombre());
+        System.out.println("Cedula: "+ vehi.getDuenio().getCedula());
+        System.out.println("Edad: "+ vehi.getDuenio().getEdad());
+    }
+
+    void imprimirAceleracion(Vehiculo vehi){
+        System.out.println("---- Aceleración ----");
+        System.out.println(vehi.aceleracion() + " HP/L");
     }
 
     void imprimirInfoDu(Duenio due){
         System.out.println("---- Información Dueño ----");
         System.out.println("Nombre: "+ due.getNombre());
         System.out.println("Cedula: "+ due.getCedula());
-        System.out.println("Edad: "+due.getEdad());
+        System.out.println("Edad: "+ due.getEdad());
     }
 
 

@@ -33,6 +33,14 @@ public class Vehiculo {
     public Vehiculo(String marca, String modelo, String placa, String color,
                     double cilindraje, double potencia, int tipoCombustible, Duenio duenio){
 
+        this.marca = marca;
+        this.modelo = modelo;
+        this.placa = placa;
+        this.color = color;
+        this.cilindraje = cilindraje;
+        this.potencia = potencia;
+        this.tipoCombustible = tipoCombustible;
+        this.duenio = duenio;
     }
 
     public double aceleracion() {
@@ -45,17 +53,6 @@ public class Vehiculo {
         return ac;
     }
 
-
-     void informacion() {
-        System.out.println("---- Informacion Vehiculo ----");
-        System.out.println("Marca: " + marca + "\nModelo: " + modelo + "\nPlaca: " + placa + "\nColor: " + color);
-
-    }
-
-    void infoDuenio(){
-        System.out.println("---- Informacion Duenio ----");
-        this.duenio.info();
-    }
 
     public String getMarca() {
         return marca;
