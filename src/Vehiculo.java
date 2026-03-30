@@ -26,6 +26,15 @@ public class Vehiculo {
 
     }
 
+    public Vehiculo(){
+        //Constructor vacio
+    }
+
+    public Vehiculo(String marca, String modelo, String placa, String color,
+                    double cilindraje, double potencia, int tipoCombustible, Duenio duenio){
+
+    }
+
     public double aceleracion() {
         double ac;
         if (tipoCombustible == 1) {

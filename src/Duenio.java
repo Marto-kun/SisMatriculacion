@@ -9,6 +9,14 @@ public class Duenio {
         this.edad = edad;
     }
 
+    public Duenio(Duenio duenio){
+
+        this.nombre = duenio.nombre;
+        this.cedula = duenio.cedula;
+        this.edad = duenio.edad;
+
+    }
+
     void info(){
         System.out.println("Nombre: " + nombre);
         System.out.println("Cedula: " + cedula);
