@@ -82,6 +82,41 @@ public class Sistema {
         System.out.println(vehi.aceleracion() + " HP/L");
     }
 
+    public Vehiculo actualizarVehiculo(Vehiculo vehi){
 
+        System.out.println("Actualice los datos del vehiculo: ");
+        System.out.println("Marca: ");
+        String marca = sc.next();
+        vehi.setMarca(marca);
+
+        System.out.println("Modelo: ");
+        String modelo = sc.next();
+        vehi.setModelo(modelo);
+
+        System.out.println("Placa: ");
+        String placa = sc.next();
+        vehi.setPlaca(placa);
+
+        System.out.println("Color: ");
+        String color = sc.next();
+        vehi.setColor(color);
+
+        System.out.println("Cilindraje: ");
+        double cilindraje = sc.nextDouble();
+        vehi.setCilindraje(cilindraje);
+
+        System.out.println("Potencia: ");
+        double potencia = sc.nextDouble();
+        vehi.setPotencia(potencia);
+
+        System.out.println("Tipo de Combustible: ");
+        int comb = sc.nextInt();
+        vehi.setTipoCombustible(comb);
+
+        Duenio du = this.crearDuenio();
+        vehi.setDuenio(du);
+
+        return vehi;
+    }
 
 }
