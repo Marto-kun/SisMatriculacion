@@ -82,7 +82,7 @@ public class Sistema {
         System.out.println(vehi.aceleracion() + " HP/L");
     }
 
-    public Vehiculo actualizarVehiculo(Vehiculo vehi){
+    void actualizarVehiculo(Vehiculo vehi){
 
         System.out.println("Actualice los datos del vehiculo: ");
         System.out.println("Marca: ");
@@ -116,7 +116,6 @@ public class Sistema {
         Duenio du = this.crearDuenio();
         vehi.setDuenio(du);
 
-        return vehi;
     }
 
 }
