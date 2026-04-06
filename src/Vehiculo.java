@@ -1,5 +1,8 @@
+
+//Definicion de la clase
 public class Vehiculo {
 
+    //Atributos privados de la clase
     private String marca;
     private String modelo;
     private String placa;
@@ -10,9 +13,10 @@ public class Vehiculo {
     private Duenio duenio;
 
 
+    //Constructor con todos los atributos de vehiculo y duenio
     public Vehiculo(String marca, String modelo, String placa, String color,
                     double cilindraje, double potencia, int tipoCombustible,
-                    String nombreDu, String cedulaDu, int edadDu){
+                    String nombreDu, String cedulaDu, int edadDu) {
 
         //this se refiere al objeto actual y no a la clase en si
         this.marca = marca;
@@ -26,12 +30,13 @@ public class Vehiculo {
 
     }
 
-    public Vehiculo(){
+    public Vehiculo() {
         //Constructor vacio
     }
 
+    //Constructor con parametros Duenio duenio
     public Vehiculo(String marca, String modelo, String placa, String color,
-                    double cilindraje, double potencia, int tipoCombustible, Duenio duenio){
+                    double cilindraje, double potencia, int tipoCombustible, Duenio duenio) {
 
         this.marca = marca;
         this.modelo = modelo;
@@ -43,6 +48,7 @@ public class Vehiculo {
         this.duenio = duenio;
     }
 
+    //Metodo para calcular aceleracion del vehiculo
     public double aceleracion() {
         double ac;
         if (tipoCombustible == 1) {
@@ -53,7 +59,33 @@ public class Vehiculo {
         return ac;
     }
 
+    public double aceleracion(Vehiculo vehi) {
 
+        double pot = vehi.getPotencia();
+        int comb = vehi.getTipoCombustible();
+        double masa;
+        double velocidad;
+
+        if (comb == 1) {
+            masa = 1200;
+            velocidad = 25.5;
+        } else {
+            masa = 2500;
+            velocidad = 30.5;
+        }
+
+        double acel = (pot / (masa * velocidad));
+
+        return acel;
+    }
+
+
+    @Override
+    public String toString() {
+        return "El vehiculo tiene las placas: " + this.placa;
+    }
+
+    //Getters y Setters para los atributos del vehiculo
     public String getMarca() {
         return marca;
     }

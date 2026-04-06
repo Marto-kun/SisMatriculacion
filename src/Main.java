@@ -1,4 +1,5 @@
 public class Main {
+
     public static void main(String[] args) {
 
         Sistema sis = new Sistema();
@@ -10,14 +11,14 @@ public class Main {
         sis.actualizarVehiculo(v1);
         sis.imprimirInfoV(v1);
 
+        //Llamada al metodo toString()
+        System.out.println(v1);
+
         Vehiculo v2 = sis.crearVehiculo();
         sis.imprimirInfoV(v2);
         sis.imprimirAceleracion(v2);
         sis.actualizarVehiculo(v2);
         sis.imprimirInfoV(v2);
-
-
-
 
 
     }
