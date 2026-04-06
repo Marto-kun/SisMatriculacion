@@ -57,6 +57,12 @@ public class Duenio {
         return edad;
     }
 
+    public void setEdad(int anio, int mes, int dia){
+        this.anio = anio;
+        this.mes = mes;
+        this.dia = dia;
+    }
+
     public String getNombre() {
         return nombre;
     }
