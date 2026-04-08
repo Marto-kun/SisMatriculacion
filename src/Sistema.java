@@ -1,11 +1,15 @@
-//Importar la utilidad de escaner por consola
+//Importar la utilidad de escaner y BufferedReader por consola
 
+import java.io.BufferedReader;
+import java.io.IOException;
+import java.io.InputStreamReader;
 import java.util.Scanner;
 
 public class Sistema {
 
     //Atributos privados (tipo Scanner)
     private Scanner sc;
+    private BufferedReader br = new BufferedReader(new InputStreamReader(System.in));
 
     //Constructor de la clase
     public Sistema() {
@@ -47,7 +51,14 @@ public class Sistema {
     public Duenio crearDuenio() {
         System.out.println("Ingrese los datos del dueño: ");
         System.out.println("Nombre: ");
-        String nombre = sc.next();
+        //Implementacion del uso de BufferedReader
+        String nombre = null;
+        //Control de Excepciones de Input/Output
+        try {
+            nombre = br.readLine();
+        } catch (IOException e) {
+            throw new RuntimeException(e);
+        }
 
         System.out.println("Cedula: ");
         String cedula = sc.next();
