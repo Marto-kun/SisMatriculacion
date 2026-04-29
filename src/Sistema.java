@@ -3,6 +3,7 @@
 import java.io.BufferedReader;
 import java.io.IOException;
 import java.io.InputStreamReader;
+import java.util.List;
 import java.util.Scanner;
 
 public class Sistema {
@@ -105,6 +106,32 @@ public class Sistema {
         System.out.println("Telefono: " + vehi.getDuenio().getTelefono());
     }
 
+    public int seleccionarVehiculo(Vehiculo vehiculos[], int cont) {
+        int index = 0;
+        System.out.println("Seleccione un Vehiculo: ");
+        for (int i = 0; i < cont; i++) {
+            System.out.println(i + 1 + "." + vehiculos[i].getPlaca());
+        }
+        System.out.print(">>> ");
+        index = sc.nextInt();
+
+        return index - 1;
+
+    }
+
+    public int seleccionarVehiculo(List<Vehiculo> listaVehiculos) {
+        int index = 0;
+        int i = 0;
+        System.out.println("Seleccione un Vehiculo: ");
+        for (Vehiculo ve : listaVehiculos) {
+            System.out.println(i + 1 + "." + ve.getPlaca());
+            i++;
+        }
+        System.out.print(">>> ");
+        index = sc.nextInt();
+        return index - 1;
+    }
+
     //Metodo para imprimir aceleracion del vehiculo
     void imprimirAceleracion(Vehiculo vehi) {
         System.out.println("---- Aceleración ----");
@@ -159,7 +186,7 @@ public class Sistema {
         int opc;
         System.out.println("---- Menu Principal ----");
         System.out.println("Ingrese la opcion deseada: ");
-        System.out.println("1) Imprimir Informacion Vehiculo");
+        System.out.println("1) Crear Vehiculo");
         System.out.println("2) Actualizar Informacion Vehiculo");
         System.out.println("3) Imprimir Aceleracion Vehiculo");
         System.out.println("4) Calcular Edad Duenio");

@@ -1,3 +1,5 @@
+import java.util.ArrayList;
+import java.util.List;
 import java.util.Scanner;
 
 public class Main {
@@ -6,30 +8,41 @@ public class Main {
 
         int opc;
         Sistema sis = new Sistema();        //Creacion del objeto tipo Sistema
-        Vehiculo v1 = sis.crearVehiculo();  //Creacion del objeto tipo Vehiculo
+        //Vehiculo v1 = new Vehiculo   //Creacion del objeto tipo Vehiculo
+
+        //Vehiculo[] vehiculos = new Vehiculo[5];
+
+        List<Vehiculo> listaVehiculos = new ArrayList<>();
+
+        int cont = 0, indice = 0;
 
         do {
             opc = Sistema.menu();
 
             switch (opc) {
                 case 1:
-                    //Imprimir Info Vehiculo
-                    sis.imprimirInfoV(v1);
+                    //Crear Vehiculo
+                    //vehiculos[cont] = sis.crearVehiculo();
+                    //cont++;
+                    listaVehiculos.add(sis.crearVehiculo());
                     break;
 
                 case 2:
                     //Actualizar Info Vehiculo
-                    sis.actualizarVehiculo(v1);
+                    indice = sis.seleccionarVehiculo(listaVehiculos);
+                    sis.actualizarVehiculo(listaVehiculos.get(indice));
                     break;
 
                 case 3:
                     //Imprimir la aceleracion del vehiculo
-                    sis.imprimirAceleracion(v1);
+                    indice = sis.seleccionarVehiculo(listaVehiculos);
+                    sis.imprimirAceleracion(listaVehiculos.get(indice));
                     break;
 
                 case 4:
                     //Imprimir la edad del dueño
-                    sis.imprirEdadDuenio(v1);
+                    indice = sis.seleccionarVehiculo(listaVehiculos);
+                    sis.imprirEdadDuenio(listaVehiculos.get(indice));
                     break;
 
                 case 5:
@@ -44,12 +57,6 @@ public class Main {
                     break;
             }
         } while (opc != 5);  //Control del bucle principal
-
-
-        //Llamada al metodo toString()
-        System.out.println(v1);
-
-
     }
 }
 
